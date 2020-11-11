@@ -2,6 +2,7 @@
 const path = require('path');
 
 const config = {
+  mode: 'production',
   entry: path.join(__dirname, './src/index.ts'),
   output: {
     path: path.resolve(__dirname, './demo'),
