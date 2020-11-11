@@ -4,7 +4,7 @@ const path = require('path');
 const config = {
   entry: path.join(__dirname, './src/index.ts'),
   output: {
-    path: path.resolve(__dirname, './docs'),
+    path: path.resolve(__dirname, './demo'),
     filename: 'widget.js',
   },
   devtool: 'source-map',

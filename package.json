@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server docs/",
+    "start": "live-server demo/",
     "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
