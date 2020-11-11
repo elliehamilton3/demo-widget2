@@ -1,5 +1,5 @@
 import "babel-polyfill";
-import { Card } from "./card";
+import { Card } from "./Card";
 import { HtmlTagWrapper } from "./html-tag-wrapper";
 
 const WrappedSimpleCalendar = HtmlTagWrapper(Card);

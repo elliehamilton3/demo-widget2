@@ -1,3 +1,3 @@
 module.exports = {
-    "packages/*/src/**/*.{ts,tsx}": () => "npm run lint:fix"
-}
+  "packages/*/src/**/*.{ts,tsx}": () => "npm run lint:fix",
+};

@@ -1,25 +1,64 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./card.module.css";
+import topics from "./topics.json";
 
-export interface ICardProps {
-  link?: string;
-  title?: string;
-  imageLink?: string;
-  id: string;
+export interface CardProps {
+  /**
+   * The id of the topic to be loaded in the card, if both name and id are provided id is used
+   */
+  dataTopicId?: string;
+  /**
+   * The name of the topic to be loaded in the card, if both name and id are provided id is used
+   */
+  dataTopicName?: string;
+  /**
+   * The language of the text to be loaded in the card - defaults to english (to be implemented)
+   */
+  language?: string;
 }
 
-const Card: React.FunctionComponent<ICardProps> = ({ id }: ICardProps) => {
-  console.log(id);
-  const title = "Financial and Monetary Systems";
-  const link =
-    "https://intelligence.weforum.org/topics/a1Gb0000000LHOUEA4?tab=publications";
-  const imageLink =
-    "https://assets.weforum.org/topic/transformation_map_image/kSAv4-JRsZFgQTylLjadZR9D-Zag1ieUZA2IiQwd_zQ.png";
+interface Topic {
+  id: string;
+  title: string;
+  link: string;
+  imageLink: string;
+}
+
+/**
+ * Card component for loading heading, image and link for a specific topic.
+ */
+const Card: React.FunctionComponent<CardProps> = ({
+  dataTopicId,
+  dataTopicName,
+}: CardProps) => {
+  const [topic, setTopicData] = useState<Topic>();
+
+  if (!dataTopicId && !dataTopicName) return <></>;
+
+  useEffect(() => {
+    const getData = async () => {
+      // Replace topic data fetching with a call to the API
+      // const result = await fetch(
+      //   'https://reqres.in/api/users?page=2',
+      // )
+      // const res = await result.json()
+
+      const topic = topics.find(({ id, title }) => {
+        if (dataTopicId) return id === dataTopicId;
+        return title === dataTopicName;
+      });
+      const topicData = await Promise.resolve(topic);
+
+      setTopicData(topicData);
+    };
+    getData();
+  }, []);
+
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
         <h1 className={styles.heading}>Explore context</h1>
-        <div className={styles.headingIcon}>
+        <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="32"
@@ -37,10 +76,10 @@ const Card: React.FunctionComponent<ICardProps> = ({ id }: ICardProps) => {
         </div>
       </div>
       <div className={styles.cardContent}>
-        <h2 className={styles.heading}>{title}</h2>
+        <h2 className={styles.heading}>{topic && topic.title}</h2>
       </div>
-      <a href={link}>
-        <img style={{ maxWidth: "100%" }} src={imageLink}></img>
+      <a href={topic && topic.link} className={styles.cardLink}>
+        <img style={{ maxWidth: "100%" }} src={topic && topic.imageLink}></img>
         <div className={styles.cardAction}>
           <p className={styles.body}>
             Explore the latest strategic trends, research and analysis

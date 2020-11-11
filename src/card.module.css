@@ -1,42 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-a {
-  color: #84919c;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #005c9c;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
 .card {
+  font-family: "Roboto", sans-serif;
   border-top: 3px solid #141414;
+  line-height: 1.6;
 }
 
 .cardHeader {
@@ -67,8 +34,14 @@ img {
   padding: 12px 0px;
 }
 
-.headingIcon {
-  height: 32px;
+.cardLink {
+  color: #84919c;
+  text-decoration: none;
+}
+
+.cardLink:hover {
+  color: #005c9c;
+  text-decoration: none;
 }
 
 .heading {

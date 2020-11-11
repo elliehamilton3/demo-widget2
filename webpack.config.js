@@ -1,34 +1,34 @@
 /* eslint-disable no-undef */
-const path = require('path');
+const path = require("path");
 
 const config = {
-  mode: 'production',
-  entry: path.join(__dirname, './src/index.ts'),
+  mode: "production",
+  entry: path.join(__dirname, "./src/index.ts"),
   output: {
-    path: path.resolve(__dirname, './demo'),
-    filename: 'widget.js',
+    path: path.resolve(__dirname, "./demo"),
+    filename: "widget.js",
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.css', '.txt'],
+    extensions: [".ts", ".tsx", ".js", ".css", ".txt"],
   },
   module: {
     rules: [
       {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
-        include: [path.resolve('src')],
-        loader: 'ts-loader',
+        include: [path.resolve("src")],
+        loader: "ts-loader",
         options: {
           transpileOnly: false,
           compilerOptions: {
-            module: 'es2015',
+            module: "es2015",
           },
         },
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
