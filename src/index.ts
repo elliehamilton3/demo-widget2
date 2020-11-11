@@ -1,8 +1,8 @@
 import 'babel-polyfill';
-import { SimpleCalendar } from './simple-calendar';
+import { Card } from './simple-calendar';
 import { HtmlTagWrapper } from './html-tag-wrapper';
 
-const WrappedSimpleCalendar = HtmlTagWrapper(SimpleCalendar);
+const WrappedSimpleCalendar = HtmlTagWrapper(Card);
 
 export default {
   SimpleCalendar: WrappedSimpleCalendar,
