@@ -87,23 +87,25 @@ There is also a language property (yet to be implemented):
 **Note:** For ease I've referred to the websites the widget would appear on as "clients"
 
 ### 1. Creating and exporting a component in various frameworks (React, Angular, Plain HTML) which could be downloaded from npm and a package and installed into the clients codebase
+#### Pros
+- More flexible to client needs/styles
+- Could still be used and paired with another solution if required
 
+#### Cons
+- More effort for the client
+- Not very flexible - We would need different exports or packages for different frameworks (react/angular)
+
+### 2. Effectively creating a webpage (dynamically) for each topic with the component in and loading it through an iframe onto the clients site
 #### Pros
 
 #### Cons
 
-### 2.
-
+### 3. Export the component as a single js script which can be imported onto the client site and then target a specific id on the page [This is the one I opted for]
 #### Pros
+- 
 
 #### Cons
-
-### 3.
-
-#### Pros
-
-#### Cons
-
+- Could have some style leakage but could be fixed with an iframe (see below)
 
 ## Configuration Parameters
 - Given the solution/design I went with I optimised highly for speed and ease of integration into other websites and flexibility across different platforms/frameworks.
@@ -118,6 +120,8 @@ There is also a language property (yet to be implemented):
 - Improve the client documentation with demos/snippets for all of the main frameworks and test across these frameworks.
 - It could be possible if there was demand/preference for it to also export the card component to be imported directly by clients - this could involve a fair amount of maintainence for the different import options so would need to be decided if it was worth it (this would enable high levels of customisation but could be manageable as the responsibility for that work wouldn't sit with us),
 - Versioning to ensure no breaking changes.
+- If we are concerned or have issues with styles leaking (this shouldn't happen from our side to the clients side because of css modules auto generating classnames but could happen the other way) then we or the client could load the component in an iframe - often considered bad but actually quite useful in this case.
+- Do some research into popular widgets and see if there are any ideas etc that inspire the project
 - Could explore other options depending on user needs which could be even more "in-context" to the task/goal that the user is completing (and user research from our side or the clients would be very helpful in this regard). Initially (when I was first reading the task and misinterpreted it) I had a mind-grape (slightly off-piste idea) of something more like grammarly which could scan the copy on the page and highlight any keywords/topics would could be expored by the user. E.g. For a blog post tagged as in the COVID-19 topic - it could scan the text of the blog post looking for key phrases such as "workforce impact" (from the subtopics) and highlight them to look like links/tooltips so that the user can explore the related topics in context.
 
 
