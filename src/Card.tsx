@@ -84,7 +84,7 @@ const Card: React.FunctionComponent<CardProps> = ({
           <p className={styles.body}>
             Explore the latest strategic trends, research and analysis
           </p>
-          <div>
+          <div className={styles.linkIcon}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="14"

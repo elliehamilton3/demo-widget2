@@ -11,3 +11,4 @@ jsconfig.json
 yarn.lock
 .cache
 .DS_Store
+/storybook-static/

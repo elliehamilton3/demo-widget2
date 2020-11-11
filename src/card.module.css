@@ -16,6 +16,7 @@
 
 .cardHeader .heading {
   font-size: 32px;
+  margin: 0px;
 }
 
 .cardContent {
@@ -51,4 +52,9 @@
 
 .body {
   font-weight: 500;
+  margin: 0;
+}
+
+.linkIcon {
+  padding-bottom: 4px;
 }
