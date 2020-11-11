@@ -79,3 +79,60 @@ There are two options for passing the reference to a specific topic:
 There is also a language property (yet to be implemented):
 - `data-language`: The language to be used for returning the text in (see list of languages and format), this is optional and the default is English.
 
+
+# Task Notes
+
+## Different Options Considered
+
+**Note:** For ease I've referred to the websites the widget would appear on as "clients"
+
+### 1. Creating and exporting a component in various frameworks (React, Angular, Plain HTML) which could be downloaded from npm and a package and installed into the clients codebase
+
+#### Pros
+
+#### Cons
+
+### 2.
+
+#### Pros
+
+#### Cons
+
+### 3.
+
+#### Pros
+
+#### Cons
+
+
+## Configuration Parameters
+- Given the solution/design I went with I optimised highly for speed and ease of integration into other websites and flexibility across different platforms/frameworks.
+- We might want to add other ways to source particular topics - keywords etc.
+- In terms of visual configuration by clients I considered two main options for how we could approach this:
+    1. Not allow clients to brand/customise it and add more branding to make it clear where it comes from, add a logo etc and make it clear that it is from a different website - really lean into this - almost more like ads.
+
+    2. Allow some options for client optimisation (either though the properties in the snippet or through some sort of dashboard - if there is need/appetite for this). This is likely the option to be preferred by the websites it goes on as people are understandably protective of their brand and ensuring a more seamless customer experience. Having multiple brands appear on a website can be quite disruptive to the user experience (widgets in general can be quite problematic in that way if not carefully considered). However, that being said having a significant context change of going from one website to the next without clear signalling to the user can also be disruptive to the user experience (in the case where its branded to look like the clients website). I would want more data and insights ideally to make this decision - I think some conversations with those websites and some pretty lightweight user testing would really help with this.
+    In the case where we did decide to brand it we would want to set a fairly fixed list of customisation options (inspired by someone like Intercom) and limit it to font, colours and icons ideally. This would also be formed in conversation with the clients requirements.
+
+## Widget Evolution
+- Improve the client documentation with demos/snippets for all of the main frameworks and test across these frameworks.
+- It could be possible if there was demand/preference for it to also export the card component to be imported directly by clients - this could involve a fair amount of maintainence for the different import options so would need to be decided if it was worth it (this would enable high levels of customisation but could be manageable as the responsibility for that work wouldn't sit with us),
+- Versioning to ensure no breaking changes.
+- Could explore other options depending on user needs which could be even more "in-context" to the task/goal that the user is completing (and user research from our side or the clients would be very helpful in this regard). Initially (when I was first reading the task and misinterpreted it) I had a mind-grape (slightly off-piste idea) of something more like grammarly which could scan the copy on the page and highlight any keywords/topics would could be expored by the user. E.g. For a blog post tagged as in the COVID-19 topic - it could scan the text of the blog post looking for key phrases such as "workforce impact" (from the subtopics) and highlight them to look like links/tooltips so that the user can explore the related topics in context.
+
+
+## General App/Codebase Extensions
+- Increase test coverage
+- Flesh out storybook component config
+- Move API fetch to a higher-order component and pass props in to Card component so that can be tested easier etc
+- Add snapshot/visual regression testing in chromatic or similar (uses stories for this)
+- Optimise `widget.js` bundle
+- Break down Card component - move SVGs and interface etc out
+- Tidy up card styles and responsiveness
+- Possibly add loading state for component or add demos examples for while card contents is loading
+
+## Assumptions
+- I have overall adopted the approach of more of a proof of concept and trying a few different options rather than perfect production ready code
+- I interpreted the task as emphasising architecture, design and thinking patterns and therefore I haven't prioritised making the widget pixel perfect and perfectly responsive etc (I didn't have the font so just replaced it with Roboto which is similar)
+- On a similar note I haven't prioritised a seamless dev experience for the project which would need doing as the current flow isn't particularly efficient as there is no hot-reloading (noted above).
+- I also didn't prioritise optimising the bundle and components etc using things such as lazy loading images instead emphasising the overall design of the concept as these could easily be added/fixed later
