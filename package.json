@@ -1,36 +1,43 @@
 {
-  "name": "demo-react-web-widget",
+  "name": "demo-widget",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "live-server demo/",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "test": "echo no tests",
+    "lint": "tsc && eslint . --ext .ts,.tsx",
+    "lint:fix": "npm run lint -- --fix && prettier --write ./**/*.ts{,x} --write ./**/*.css"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
   "dependencies": {
     "react": "^16.13.1",
-    "styled-components": "^5.1.0"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
-    "@types/styled-components": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
     "babel-polyfill": "^6.26.0",
-    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
     "live-server": "^1.2.1",
-    "mini-css-extract-plugin": "^0.9.0",
-    "react-dom": "^16.13.1",
     "style-loader": "^2.0.0",
     "ts-loader": "^7.0.3",
-    "typescript": "^3.8.3",
+    "eslint": "^7.13.0",
+    "eslint-plugin-react": "^7.21.5",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.5",
     "typescript-plugin-css-modules": "^2.8.0",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-cli": "^3.3.11"
   }
 }

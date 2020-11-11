@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import styles from "./card.module.css";
 
 export interface ICardProps {
@@ -8,19 +8,19 @@ export interface ICardProps {
   id: string;
 }
 
-const Card: React.FunctionComponent<ICardProps> = ({
-  id
-}: ICardProps) => {
-   console.log(id)
-   const title = 'Financial and Monetary Systems'
-   const link = "https://intelligence.weforum.org/topics/a1Gb0000000LHOUEA4?tab=publications"
-   const imageLink= "https://assets.weforum.org/topic/transformation_map_image/kSAv4-JRsZFgQTylLjadZR9D-Zag1ieUZA2IiQwd_zQ.png"
+const Card: React.FunctionComponent<ICardProps> = ({ id }: ICardProps) => {
+  console.log(id);
+  const title = "Financial and Monetary Systems";
+  const link =
+    "https://intelligence.weforum.org/topics/a1Gb0000000LHOUEA4?tab=publications";
+  const imageLink =
+    "https://assets.weforum.org/topic/transformation_map_image/kSAv4-JRsZFgQTylLjadZR9D-Zag1ieUZA2IiQwd_zQ.png";
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
         <h1 className={styles.heading}>Explore context</h1>
         <div className={styles.headingIcon}>
-        <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             height="32"
             viewBox="0 0 44 44"
@@ -46,23 +46,23 @@ const Card: React.FunctionComponent<ICardProps> = ({
             Explore the latest strategic trends, research and analysis
           </p>
           <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="14"
-            viewBox="0 0 28 14"
-            width="28"
-          >
-            <g
-              fill="none"
-              fillRule="evenodd"
-              stroke="#84919c"
-              strokeWidth="2"
-              transform="translate(1 1)"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="14"
+              viewBox="0 0 28 14"
+              width="28"
             >
-              <path d="m23 6h-22.5" strokeLinecap="square" />
-              <path d="m20 0 5 6-5 6" />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="#84919c"
+                strokeWidth="2"
+                transform="translate(1 1)"
+              >
+                <path d="m23 6h-22.5" strokeLinecap="square" />
+                <path d="m20 0 5 6-5 6" />
+              </g>
+            </svg>
           </div>
         </div>
       </a>
@@ -70,4 +70,4 @@ const Card: React.FunctionComponent<ICardProps> = ({
   );
 };
 
-export {Card};
+export { Card };
