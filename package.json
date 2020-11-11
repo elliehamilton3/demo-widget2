@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.config.js",
     "test": "echo no tests",
     "lint": "tsc && eslint . --ext .ts,.tsx",
-    "lint:fix": "npm run lint -- --fix && prettier --write ./**/*.ts{,x} --write ./**/*.css"
+    "lint:fix": "npm run lint -- --fix && prettier --write ./src/**/*.ts{,x} --write ./src/**/*.css"
   },
   "husky": {
     "hooks": {

@@ -1,4 +1,4 @@
-// webpack.base.js
+/* eslint-disable no-undef */
 const path = require('path');
 
 const config = {
