@@ -50,7 +50,7 @@ No CI/CD pipeline for testing has been implemented yet and there is no process f
 - This repo deploys to [Netlify](https://www.netlify.com/) automatically on pushes to `main`.
 The hosted production version of this repo can be found at [https://demo-widget2.netlify.app/](https://demo-widget2.netlify.app/).
 
-- Link to the hosted storybook instance can be found [https://5fac97ae36797a0021fa910e-dztjycpwgb.chromatic.com/?path=/story/card--topic-1](https://5fac97ae36797a0021fa910e-dztjycpwgb.chromatic.com/?path=/story/card--topic-1)
+- Link to the hosted storybook instance can be found [https://master--5fac97ae36797a0021fa910e.chromatic.com/](https://master--5fac97ae36797a0021fa910e.chromatic.com/)
 
 ## Demo
 
