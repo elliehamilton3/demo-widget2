@@ -146,7 +146,7 @@ Here are the links to the unfinished repo [https://github.com/elliehamilton3/dem
 - Add snapshot/visual regression testing in chromatic or similar (uses stories for this)
 - Optimise `widget.js` bundle
 - Break down Card component - move SVGs and interface etc out
-- Tidy up card styles and responsiveness
+- Tidy up card styles and responsiveness (some of this is handled by the client but we could handle some - font sizes for example)
 - Possibly add loading state for component or add demos examples for while card contents is loading
 
 ## Assumptions
@@ -154,3 +154,4 @@ Here are the links to the unfinished repo [https://github.com/elliehamilton3/dem
 - I interpreted the task as emphasising architecture, design and thinking patterns and therefore I haven't prioritised making the widget pixel perfect and perfectly responsive etc (I didn't have the font so just replaced it with Roboto which is similar)
 - On a similar note I haven't prioritised a seamless dev experience for the project which would need doing as the current flow isn't particularly efficient as there is no hot-reloading (noted above).
 - I also didn't prioritise optimising the bundle and components etc using things such as lazy loading images instead emphasising the overall design of the concept as these could easily be added/fixed later
+- The size of the widget and most of how it is responsive is delagated to the parent container (the one created by the client) - this allows the client to lay it out/size as they see fit and the card just fills the space it is given 
