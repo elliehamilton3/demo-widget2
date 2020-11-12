@@ -93,16 +93,29 @@ There is also a language property (yet to be implemented):
 
 #### Cons
 - More effort for the client
-- Not very flexible - We would need different exports or packages for different frameworks (react/angular)
+- More effort on our side - we would need different exports or packages for different frameworks (react/angular) and to manage versions etc
 
 ### 2. Effectively creating a webpage (dynamically) for each topic with the component in and loading it through an iframe onto the clients site
+- I did also have a play around building this option
+Here are the links to the unfinished repo [https://github.com/elliehamilton3/demo-widget](https://github.com/elliehamilton3/demo-widget) and hosted [https://demo-widget.netlify.app/](https://demo-widget.netlify.app/).
+
 #### Pros
+- Fast and easy to add for the client
+- Very similar to the option below in a lot of ways
+- Could fit better into an existing tech stack on our side possibly but personally I prefer having a specific webpack build which could run just as a script when needed/on changes
+- Potentially faster at scale as you could cache the pages for each of the topics (even with the dynamic data) - not sure if the client would be able to preload that if its in an iframe
 
 #### Cons
+- Less flexible/a bit more complex in terms of configuration - could take a topic id or name fairly easily but more complex config (language etc) was a bit tricker and visual config would probably be best done through soem sort of dashboard
+- Seemed a bit messier having it in an iframe and styling the iframe was particularly messy (there might be a cleaner way to do it than how I did it)
+- No option for the client to override the styles themselves would have to be done in advance with config
 
 ### 3. Export the component as a single js script which can be imported onto the client site and then target a specific id on the page [This is the one I opted for]
 #### Pros
-- 
+- Highly flexible could be used in any tech stack
+- Super quick and easy for the client
+- Simple and a pretty clean solution overall
+- We could even intentionally allow the clients tl override the styles if they want (that way they take on the workload not us)
 
 #### Cons
 - Could have some style leakage but could be fixed with an iframe (see below)
