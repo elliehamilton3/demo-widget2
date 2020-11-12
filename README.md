@@ -164,7 +164,7 @@ There is also a language property (yet to be implemented):
 
 ## General App/Codebase Extensions
 
-- Increase test coverage
+- Increase test coverage and add a11y testing with storybook
 - Build out storybook component config
 - Move API fetch to a higher-order component and pass props in to Card component so that can be tested easier etc
 - Add CI/CD pipeline with snapshot/visual regression testing in chromatic
