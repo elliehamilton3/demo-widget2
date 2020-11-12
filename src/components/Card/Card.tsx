@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import styles from "./card.module.css";
-import topics from "./topics.json";
+import styles from "./Card.module.css";
+import topics from "../../topics.json";
 
 export interface CardProps {
   /**

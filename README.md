@@ -23,7 +23,13 @@ You need to have these things installed:
 
 ## Running the tests
 
-- TBC
+- All tests are run using [Jest](https://jestjs.io/)
+
+To run the tests use:
+
+```
+npm test
+```
 
 ## Built With
 

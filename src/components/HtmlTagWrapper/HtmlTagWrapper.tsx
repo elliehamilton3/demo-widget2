@@ -1,6 +1,6 @@
 import React from "react";
 import * as ReactDOM from "react-dom";
-import attributesMapper from "./lib/attributesMapper";
+import attributesMapper from "../../lib/attributesMapper";
 
 // eslint-disable-next-line no-unused-vars
 function HtmlTagWrapper(Component: (props?: any) => JSX.Element) {
