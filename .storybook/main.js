@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
@@ -11,8 +11,8 @@ module.exports = {
       ...baseConfig,
       module: {
         ...module,
-        rules: [...(module.rules || [])]
-      }
+        rules: [...(module.rules || [])],
+      },
     };
     //
     // CSS Modules
@@ -21,25 +21,25 @@ module.exports = {
 
     // First we prevent webpack from using Storybook CSS rules to process CSS modules
     newConfig.module.rules.find(
-      rule => rule.test.toString() === '/\\.css$/'
+      (rule) => rule.test.toString() === "/\\.css$/"
     ).exclude = /\.module\.css$/;
 
     // Then we tell webpack what to do with CSS modules
     newConfig.module.rules.push({
       test: /\.module\.css$/,
-      include: path.resolve(__dirname, '../src'),
+      include: path.resolve(__dirname, "../src"),
       use: [
-        'style-loader',
+        "style-loader",
         {
-          loader: 'css-loader',
+          loader: "css-loader",
           options: {
             importLoaders: 1,
-            modules: true
-          }
-        }
-      ]
+            modules: true,
+          },
+        },
+      ],
     });
 
     return newConfig;
-  }
+  },
 };
