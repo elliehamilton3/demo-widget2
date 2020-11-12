@@ -12,20 +12,20 @@ const Template: Story<CardProps> = (args) => <Card {...args} />;
 
 export const Topic1 = Template.bind({});
 Topic1.args = {
-  dataTopicId: "0001",
+  topicId: "0001",
 };
 
 export const Topic2 = Template.bind({});
 Topic2.args = {
-  dataTopicId: "0002",
+  topicId: "0002",
 };
 
 export const Topic3 = Template.bind({});
 Topic3.args = {
-  dataTopicId: "0003",
+  topicId: "0003",
 };
 
 export const TopicByName = Template.bind({});
 TopicByName.args = {
-  dataTopicName: "COVID-19",
+  topicName: "COVID-19",
 };

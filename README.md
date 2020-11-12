@@ -147,6 +147,7 @@ There is also a language property (yet to be implemented):
 ## Widget Evolution
 
 - Improve the client documentation with demos/snippets for all of the main frameworks and test across these frameworks.
+- Create a package so that clients can download js as node module (and manage version that way) - I had to create a bit of a hack for this for the demo in the react/next app (also it doesn't work on first load needs to be refreshed - I'm still learning about some of the prerendering in next but I'm sure theres a fix for this I think client just needs a placeholder until the script has loaded).
 - It could be possible if there was demand/preference for it to also export the card component to be imported directly by clients - this could involve a fair amount of maintainence for the different import options so would need to be decided if it was worth it (this would enable high levels of customisation but could be manageable as the responsibility for that work wouldn't sit with us),
 - Versioning to ensure no breaking changes.
 - If we are concerned or have issues with styles leaking (this shouldn't happen from our side to the clients side because of css modules auto generating classnames but could happen the other way) then we or the client could load the component in an iframe - often considered bad but actually quite useful in this case.

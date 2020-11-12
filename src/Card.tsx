@@ -6,11 +6,11 @@ export interface CardProps {
   /**
    * The id of the topic to be loaded in the card, if both name and id are provided id is used
    */
-  dataTopicId?: string;
+  topicId?: string;
   /**
    * The name of the topic to be loaded in the card, if both name and id are provided id is used
    */
-  dataTopicName?: string;
+  topicName?: string;
   /**
    * The language of the text to be loaded in the card - defaults to english (to be implemented)
    */
@@ -28,12 +28,12 @@ interface Topic {
  * Card component for loading heading, image and link for a specific topic.
  */
 const Card: React.FunctionComponent<CardProps> = ({
-  dataTopicId,
-  dataTopicName,
+  topicId,
+  topicName,
 }: CardProps) => {
   const [topic, setTopicData] = useState<Topic>();
 
-  if (!dataTopicId && !dataTopicName) return <></>;
+  if (!topicId && !topicName) return <></>;
 
   useEffect(() => {
     const getData = async () => {
@@ -44,8 +44,8 @@ const Card: React.FunctionComponent<CardProps> = ({
       // const res = await result.json()
 
       const topic = topics.find(({ id, title }) => {
-        if (dataTopicId) return id === dataTopicId;
-        return title === dataTopicName;
+        if (topicId) return id === topicId;
+        return title === topicName;
       });
       const topicData = await Promise.resolve(topic);
 
