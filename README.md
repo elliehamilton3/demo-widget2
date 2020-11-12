@@ -130,7 +130,7 @@ There is also a language property (yet to be implemented):
 
 #### Cons
 
-- Could have some style leakage but could be fixed with an iframe (see below)
+- Could have some style leakage but could be fixed with an iframe (see below) - you can see this happening in some of the demos
 - Possibly less performant than option 2 as the topics are fetched on each component render (not sure if there is a way around this although the api could be cached) and I'm not sure what the prerending options are for the client might depend on what their tech stack is.
 
 ## Configuration Parameters
