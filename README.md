@@ -165,7 +165,7 @@ There is also a language property (yet to be implemented):
 - Increase test coverage
 - Build out storybook component config
 - Move API fetch to a higher-order component and pass props in to Card component so that can be tested easier etc
-- Add snapshot/visual regression testing in chromatic or similar (uses stories for this)
+- Add CI/CD pipeline with snapshot/visual regression testing in chromatic
 - Optimise `widget.js` bundle
 - Break down Card component - move SVGs and interface etc out
 - Tidy up card styles and responsiveness (some of this is handled by the client but we could handle some - font sizes for example)

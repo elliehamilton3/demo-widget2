@@ -79,7 +79,11 @@ const Card: React.FunctionComponent<CardProps> = ({
         <h2 className={styles.heading}>{topic && topic.title}</h2>
       </div>
       <a href={topic && topic.link} className={styles.cardLink}>
-        <img style={{ maxWidth: "100%" }} src={topic && topic.imageLink}></img>
+        <img
+          style={{ maxWidth: "100%" }}
+          src={topic && topic.imageLink}
+          alt={topic && topic.title}
+        ></img>
         <div className={styles.cardAction}>
           <p className={styles.body}>
             Explore the latest strategic trends, research and analysis

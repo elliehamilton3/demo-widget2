@@ -12,3 +12,4 @@ yarn.lock
 .cache
 .DS_Store
 storybook-static/
+build-storybook.log
