@@ -6,7 +6,6 @@ import attributesMapper from "./lib/attributesMapper";
 function HtmlTagWrapper(Component: (props?: any) => JSX.Element) {
   const el = document.getElementById("widget");
   const props = attributesMapper(el);
-  console.log(props);
   ReactDOM.render(<Component {...props} />, el);
 }
 
