@@ -119,6 +119,7 @@ Here are the links to the unfinished repo [https://github.com/elliehamilton3/dem
 
 #### Cons
 - Could have some style leakage but could be fixed with an iframe (see below)
+- Possibly less performant than option 2 as the topics are fetched on each component render (not sure if there is a way around this).
 
 ## Configuration Parameters
 - Given the solution/design I went with I optimised highly for speed and ease of integration into other websites and flexibility across different platforms/frameworks.
