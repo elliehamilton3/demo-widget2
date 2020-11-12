@@ -141,7 +141,7 @@ Here are the links to the unfinished repo [https://github.com/elliehamilton3/dem
 
 ## General App/Codebase Extensions
 - Increase test coverage
-- Flesh out storybook component config
+- Build out storybook component config
 - Move API fetch to a higher-order component and pass props in to Card component so that can be tested easier etc
 - Add snapshot/visual regression testing in chromatic or similar (uses stories for this)
 - Optimise `widget.js` bundle
@@ -152,6 +152,6 @@ Here are the links to the unfinished repo [https://github.com/elliehamilton3/dem
 ## Assumptions
 - I have overall adopted the approach of more of a proof of concept and trying a few different options rather than perfect production ready code
 - I interpreted the task as emphasising architecture, design and thinking patterns and therefore I haven't prioritised making the widget pixel perfect and perfectly responsive etc (I didn't have the font so just replaced it with Roboto which is similar)
-- On a similar note I haven't prioritised a seamless dev experience for the project which would need doing as the current flow isn't particularly efficient as there is no hot-reloading (noted above).
+- On a similar note I haven't prioritised a seamless dev experience for the project which would need doing as the current flow isn't particularly efficient as there is no hot-reloading (noted above) although storybook meets most of what is needed.
 - I also didn't prioritise optimising the bundle and components etc using things such as lazy loading images instead emphasising the overall design of the concept as these could easily be added/fixed later
 - The size of the widget and most of how it is responsive is delagated to the parent container (the one created by the client) - this allows the client to lay it out/size as they see fit and the card just fills the space it is given 
