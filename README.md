@@ -41,6 +41,8 @@ npm test
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 
+**Note** [I only just thought to add this - 15/11/20]: This was inspired by this repo I found [https://github.com/ZhiyueYi/demo-react-web-widget]https://github.com/ZhiyueYi/demo-react-web-widget() from this blog post [https://dev.to/zhiyueyi/include-your-react-widgets-in-any-web-page-emj](https://dev.to/zhiyueyi/include-your-react-widgets-in-any-web-page-emj) so I started this v2 of the widget by cloning that repo (which is why they are also listed as a contributer - it has a free to use licence).
+
 ## CI/CD
 
 No CI/CD pipeline for testing has been implemented yet and there is no process for branching etc outside of pushing directly to `main`.
