@@ -76,7 +76,7 @@ Integrating as a client site (news site, blog etc) can be as simple as adding th
 <script src="https://demo-widget2.netlify.app/widget.js"></script>
 ```
 
-**Note:** For React etc the script tag will need to be added to the `<body>` of the base HTML document.
+**Note:** For React etc the script tag will need to be loaded slightly differently and in the end I used a hook to load the script and append it to the document. I'm not sure this is an ideal solution but it worked for demo purposes.
 
 See here for instructions for [Next](https://nextjs.org/docs/advanced-features/custom-document).
 
@@ -114,7 +114,7 @@ There is also a language property (yet to be implemented):
 ### 2. Effectively creating a webpage (dynamically) for each topic with the component in and loading it through an iframe onto the clients site
 
 - I did also have a play around building this option
-  Here are the links to the unfinished repo [https://github.com/elliehamilton3/demo-widget](https://github.com/elliehamilton3/demo-widget) and hosted [https://demo-widget.netlify.app/](https://demo-widget.netlify.app/).
+  Here are the links to the unfinished repo [https://github.com/elliehamilton3/demo-widget](https://github.com/elliehamilton3/demo-widget) and hosted [https://demo-widget.netlify.app/examples/demo.html](https://demo-widget.netlify.app/examples/demo.html).
 
 #### Pros
 
